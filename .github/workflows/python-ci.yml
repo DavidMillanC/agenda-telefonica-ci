@@ -27,7 +27,11 @@ jobs:
     - name: Run tests
       run: |
         pytest --maxfail=1 --disable-warnings -q
+      env:
+        PYTHONPATH: ${{ github.workspace }}
 
     - name: Run coverage report
       run: |
         pytest --cov=agenda --cov-report=term-missing
+      env:
+        PYTHONPATH: ${{ github.workspace }}
