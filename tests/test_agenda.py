@@ -3,7 +3,7 @@ from agenda.main import AgendaTelefonica
 
 def test_agregar_contacto_valido():
     agenda = AgendaTelefonica()
-    agenda.agregar_contacto("Carlos", "0998765432")
+    agenda.agregar_contacto("00", "00")
     assert agenda.obtener_contacto("Carlos") == "0998765432"
 
 def test_nombre_invalido():
