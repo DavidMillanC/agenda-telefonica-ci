@@ -11,3 +11,6 @@ class AgendaTelefonica:
 
     def obtener_contacto(self, nombre):
         return self.contactos.get(nombre, "Contacto no encontrado.")
+
+    def buscar_contacto(self, filtro):
+        return {nombre: tel for nombre, tel in self.contactos.items() if filtro.lower() in nombre.lower()}

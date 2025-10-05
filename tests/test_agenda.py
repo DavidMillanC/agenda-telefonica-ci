@@ -15,3 +15,11 @@ def test_telefono_invalido():
     agenda = AgendaTelefonica()
     with pytest.raises(ValueError):
         agenda.agregar_contacto("Maria", "123")
+
+def test_buscar_contacto():
+    agenda = AgendaTelefonica()
+    agenda.agregar_contacto("Carlos", "0998765432")
+    agenda.agregar_contacto("Carla", "0987654321")
+    resultado = agenda.buscar_contacto("Car")
+    assert "Carlos" in resultado
+    assert "Carla" in resultado
