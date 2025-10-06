@@ -35,3 +35,13 @@ jobs:
         pytest --cov=agenda --cov-report=term-missing
       env:
         PYTHONPATH: ${{ github.workspace }}
+    - name: Ejecutar tests con coverage
+      run: |
+        coverage run -m pytest
+        coverage html
+
+    - name: Publicar reporte como artefacto
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-html
+        path: htmlcov/
