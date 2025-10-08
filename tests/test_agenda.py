@@ -6,6 +6,12 @@ def test_agregar_contacto_valido():
     agenda.agregar_contacto("Carlos", "0998765432")
     agenda.obtener_contacto("Carlos") == "0998765432"
     assert agenda.obtener_contacto("Carlos") == "0998765432"
+
+def test_agregar_contacto_valido():
+    agenda = AgendaTelefonica()
+    agenda.agregar_contacto("Pedro", "0998765432")
+    agenda.obtener_contacto("Pedro") == "0998765432"
+    assert agenda.obtener_contacto("Pedro") == "0998765432"
 """ 
 def test_agregar_contacto_valido():
     agenda = AgendaTelefonica()
