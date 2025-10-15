@@ -4,7 +4,7 @@ from agenda.main import AgendaTelefonica
 
 def test_agregar_contacto_valido_carlos():
     agenda = AgendaTelefonica()
-    agenda.agregar_contacto("Carlos", "0998765432")
+    agenda.agregar_contacto("Pepe", "0998755432")
     assert agenda.obtener_contacto("Carlos") == "0998765432"
 
 
